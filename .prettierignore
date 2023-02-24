@@ -1,0 +1,8 @@
+.gitignore
+.prettierignore
+
+.husky
+.vscode
+
+node_modules
+dist

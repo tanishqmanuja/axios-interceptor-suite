@@ -1,0 +1,43 @@
+{
+  "name": "@tqman/axios-interceptor-suite",
+  "version": "0.1.0",
+  "description": "Useful axios interceptors",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "prepare": "husky install",
+    "build": "tsup",
+    "format": "prettier --write **/*.ts",
+    "format:check": "prettier --check **/*.ts ",
+    "type:check": "tsc",
+    "release": "pnpm format:check && pnpm: type:check && pnpm build && changeset publish"
+  },
+  "keywords": [
+    "axios",
+    "interceptors",
+    "retry",
+    "throttle",
+    "rate-limit",
+    "auth-refresh"
+  ],
+  "author": "Tanishq Manuja",
+  "license": "MIT",
+  "devDependencies": {
+    "@changesets/cli": "^2.26.0",
+    "@types/node": "^18.14.1",
+    "axios": "^1.3.4",
+    "husky": "^8.0.0",
+    "prettier": "2.8.4",
+    "tsup": "^6.6.3",
+    "typescript": "5.0.0-beta"
+  },
+  "peerDependencies": {
+    "axios": "^1.3.4"
+  },
+  "dependencies": {
+    "axios-auth-refresh": "^3.3.6",
+    "is-retry-allowed": "^3.0.0",
+    "rxjs": "^7.8.0"
+  }
+}
