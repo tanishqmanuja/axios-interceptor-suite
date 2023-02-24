@@ -1,9 +1,10 @@
-.changesets
+.changeset
 .github
 .husky
+.vscode
 src
 pnpm-lock.yaml
 tsconfig.json
-tsup.config.json
+tsup.config.ts
 .prettierignore
 .prettierrc.cjs
