@@ -11,7 +11,7 @@
     "format": "prettier --write **/*.ts",
     "format:check": "prettier --check **/*.ts ",
     "type:check": "tsc",
-    "release": "pnpm format:check && pnpm: type:check && pnpm build && changeset publish"
+    "release": "pnpm format:check && pnpm type:check && pnpm build && changeset publish"
   },
   "keywords": [
     "axios",
