@@ -23,6 +23,8 @@
   ],
   "author": "Tanishq Manuja",
   "license": "MIT",
+  "homepage": "https://github.com/tanishqmanuja/axios-interceptor-suite#readme",
+  "repository": "github:tanishqmanuja/axios-interceptor-suite",
   "devDependencies": {
     "@changesets/cli": "^2.26.0",
     "@types/node": "^18.14.1",
