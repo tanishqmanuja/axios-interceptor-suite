@@ -27,14 +27,14 @@ const axiosInstance = axios.create() // ofcourse you will provide your base conf
 // overhead request will be delayed until next interval. Make sure originator of request is slower than the rate limit on average.
 const { id, eject } = createRateLimitInterceptor(axiosInstance, {
 	count: 6;
-  interval: 2 * 1000;
+	interval: 2 * 1000;
 })
 
 
 // retry interceptor to retry failed requests 2 times with delay of 1 second between each.
 createRetryInterceptor(axiosInstance, {
 	count: 2;
-  delay: 1 * 1000; // delay can be function also: (retryCount) => (1 + 2 ** retryCount) * 1000
+	delay: 1 * 1000; // delay can be function also: (retryCount) => (1 + 2 ** retryCount) * 1000
 })
 
 // make you requests (with rate limit and retry)
