@@ -4,7 +4,7 @@ import { losslessRateLimit } from "~utils/lib/rxjs/lossless-rate-limit.js";
 
 export type RateLimitOptions = {
   count: number;
-  interval: number;
+  interval?: number;
 };
 
 export type AxiosRateLimitRequestConfig = AxiosRequestConfig & {
@@ -39,7 +39,7 @@ export function createRateLimitInterceptor(
 
   return {
     get id() {
-      return interceptorId;
+      return { request: interceptorId };
     },
     eject: () => {
       subscription.unsubscribe();

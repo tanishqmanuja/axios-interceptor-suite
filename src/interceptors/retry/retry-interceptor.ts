@@ -24,7 +24,7 @@ export type InternalAxiosRetryRequestConfig = AxiosRetryRequestConfig & {
 
 export const createRetryInterceptor = (
   axiosInstance: AxiosInstance,
-  options: RetryConfig
+  options: RetryConfig = {}
 ) => {
   const interceptorId = axiosInstance.interceptors.response.use(
     undefined,
@@ -68,7 +68,7 @@ export const createRetryInterceptor = (
 
   return {
     get id() {
-      return interceptorId;
+      return { response: interceptorId };
     },
     eject: () => {
       axiosInstance.interceptors.response.eject(interceptorId);

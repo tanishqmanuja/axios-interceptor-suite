@@ -10,9 +10,9 @@ pnpm i @tqman/axios-interceptor-suite #pnpm
 yarn add  @tqman/axios-interceptor-suite # yarn
 ```
 
-# Usage
+## Usage
 
-```typescript
+```ts
 import axios from "axios"
 
 import { createRateLimitInterceptor,
@@ -41,13 +41,13 @@ createRetryInterceptor(axiosInstance, {
 axiosInstance.get("https://example.com")
 
 // make request without rate limit
-axiosInstance.get("https://example.com",{ bypassRateLimit: true } as AxiosRateLimitRequestConfig)
+axiosInstance.get("https://example.com", { bypassRateLimit: true } as AxiosRateLimitRequestConfig)
 
 // make request without retry on failure
-axiosInstance.get("https://example.com",{ retry: false } as AxiosRetryRequestConfig)
+axiosInstance.get("https://example.com", { retry: false } as AxiosRetryRequestConfig)
 
 // change retry config for specific request & disable rate limit
-axiosInstance.get("https://example.com",{ retry: { count: 5 }, bypassRateLimit: true } as AxiosRetryRequestConfig & AxiosRateLimitRequestConfig)
+axiosInstance.get("https://example.com", { retry: { count: 5 }, bypassRateLimit: true } as AxiosRetryRequestConfig & AxiosRateLimitRequestConfig)
 
 
 // eject rate limit interceptor

@@ -4,7 +4,7 @@ import authRefreshInterceptor, {
 } from "axios-auth-refresh";
 import { MaybePromise } from "~utils/lib/typescript/promise.js";
 
-export { AxiosAuthRefreshRequestConfig } from "axios-auth-refresh";
+export type { AxiosAuthRefreshRequestConfig } from "axios-auth-refresh";
 
 export type AuthRefreshOptions = AxiosAuthRefreshOptions & {
   onRefresh: (error: AxiosError) => MaybePromise<any>;
@@ -21,7 +21,7 @@ export function createAuthRefreshInterceptor(
   );
   return {
     get id() {
-      return interceptorId;
+      return { response: interceptorId };
     },
     eject: () => {
       axiosInstance.interceptors.request.eject(interceptorId);
