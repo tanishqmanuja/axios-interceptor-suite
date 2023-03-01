@@ -2,7 +2,7 @@ import { AxiosInstance } from "axios";
 import {
   AxiosCacheInstance,
   CacheAxiosResponse,
-  CacheOptions,
+  CacheOptions as AxiosCacheOptions,
   CacheProperties,
   CacheRequestConfig,
   buildMemoryStorage,
@@ -18,6 +18,8 @@ export type AxiosCacheRequestConfig<R = any, D = any> = CacheRequestConfig<
   D
 >;
 export type AxiosCacheResponse<R = any, D = any> = CacheAxiosResponse<R, D>;
+
+export type CacheOptions = AxiosCacheOptions;
 
 export function createCacheInterceptor(
   axiosInstance: AxiosInstance,

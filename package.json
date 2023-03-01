@@ -1,8 +1,25 @@
 {
   "name": "@tqman/axios-interceptor-suite",
-  "version": "0.2.2",
+  "version": "0.3.0",
   "description": "Useful axios interceptors",
-  "main": "dist/index.js",
+  "files": [
+    "dist/*"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs"
+    },
+    "./interceptors": {
+      "types": "./dist/interceptors/index.d.ts",
+      "import": "./dist/interceptors/index.mjs"
+    },
+    "./vendor": {
+      "types": "./dist/vendor.d.ts",
+      "import": "./dist/vendor.mjs"
+    }
+  },
+  "main": "dist/index.mjs",
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
   "scripts": {
