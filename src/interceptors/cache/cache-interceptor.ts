@@ -1,8 +1,8 @@
 import { AxiosInstance } from "axios";
 import {
   AxiosCacheInstance,
-  CacheOptions as AxiosCacheOptions,
   CacheAxiosResponse,
+  CacheOptions,
   CacheProperties,
   CacheRequestConfig,
   buildMemoryStorage,
@@ -13,7 +13,6 @@ import {
   isStorage,
 } from "axios-cache-interceptor";
 
-export type CacheOptions = AxiosCacheOptions;
 export type AxiosCacheRequestConfig<R = any, D = any> = CacheRequestConfig<
   R,
   D

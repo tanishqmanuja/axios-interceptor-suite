@@ -2,6 +2,7 @@ import { AxiosError, AxiosInstance } from "axios";
 import authRefreshInterceptor, {
   AxiosAuthRefreshOptions,
 } from "axios-auth-refresh";
+
 import { MaybePromise } from "~utils/lib/typescript/promise.js";
 
 export type { AxiosAuthRefreshRequestConfig } from "axios-auth-refresh";

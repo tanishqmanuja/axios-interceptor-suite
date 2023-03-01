@@ -1,6 +1,6 @@
 {
   "name": "@tqman/axios-interceptor-suite",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Useful axios interceptors",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
@@ -27,6 +27,7 @@
   "repository": "github:tanishqmanuja/axios-interceptor-suite",
   "devDependencies": {
     "@changesets/cli": "^2.26.0",
+    "@trivago/prettier-plugin-sort-imports": "^4.1.1",
     "@types/node": "^18.14.1",
     "axios": "^1.3.4",
     "husky": "^8.0.0",

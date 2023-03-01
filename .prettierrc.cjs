@@ -5,4 +5,7 @@ module.exports = {
   singleQuote: false,
   arrowParens: "avoid",
   printWidth: 80,
+  importOrder: ["<THIRD_PARTY_MODULES>", "^[.~/]"],
+  importOrderSeparation: true,
+  plugins: [require("@trivago/prettier-plugin-sort-imports")],
 };

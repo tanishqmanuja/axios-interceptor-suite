@@ -1,5 +1,11 @@
 # @tqman/axios-interceptor-suite
 
+## 0.2.2
+
+### Patch Changes
+
+- Fix Imports Exports
+
 ## 0.2.1
 
 ### Patch Changes

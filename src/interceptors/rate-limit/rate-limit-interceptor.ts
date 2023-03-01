@@ -1,5 +1,6 @@
 import { AxiosInstance, AxiosRequestConfig } from "axios";
 import { Subject, tap } from "rxjs";
+
 import { losslessRateLimit } from "~utils/lib/rxjs/lossless-rate-limit.js";
 
 export type RateLimitOptions = {
