@@ -24,7 +24,10 @@ export type CacheOptions = AxiosCacheOptions;
 export function createCacheInterceptor(
   axiosInstance: AxiosInstance,
   options: CacheOptions = {}
-) {
+): {
+  readonly id: { response: number; request: number };
+  eject: () => void;
+} {
   const axiosCache = axiosInstance as AxiosCacheInstance;
 
   if (axiosCache.defaults.cache) {

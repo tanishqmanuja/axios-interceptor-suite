@@ -17,7 +17,10 @@ type LazyResolve = () => void;
 export function createRateLimitInterceptor(
   axiosInstance: AxiosInstance,
   options: RateLimitOptions
-) {
+): {
+  readonly id: { request: number };
+  eject: () => void;
+} {
   const queue = new Subject<LazyResolve>();
   const subscription = queue
     .pipe(

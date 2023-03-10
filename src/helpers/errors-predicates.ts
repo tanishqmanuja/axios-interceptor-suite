@@ -6,7 +6,7 @@ const IDEMPOTENT_HTTP_METHODS = SAFE_HTTP_METHODS.concat(["put", "delete"]);
 
 // Original source for these predicates: https://github.com/softonic/axios-retry
 
-export function isNetworkError(error: AxiosError) {
+export function isNetworkError(error: AxiosError): boolean {
   return (
     !error.response &&
     Boolean(error.code) && // Prevents retrying cancelled requests
@@ -15,7 +15,7 @@ export function isNetworkError(error: AxiosError) {
   );
 }
 
-export function isRetryableError(error: AxiosError) {
+export function isRetryableError(error: AxiosError): boolean {
   return (
     error.code !== "ECONNABORTED" &&
     (!error.response ||
@@ -23,7 +23,7 @@ export function isRetryableError(error: AxiosError) {
   );
 }
 
-export function isSafeRequestError(error: AxiosError) {
+export function isSafeRequestError(error: AxiosError): boolean {
   if (!error.config) {
     return false;
   }
@@ -34,7 +34,7 @@ export function isSafeRequestError(error: AxiosError) {
   );
 }
 
-export function isIdempotentRequestError(error: AxiosError) {
+export function isIdempotentRequestError(error: AxiosError): boolean {
   if (!error.config) {
     return false;
   }
@@ -45,6 +45,6 @@ export function isIdempotentRequestError(error: AxiosError) {
   );
 }
 
-export function isNetworkOrIdempotentRequestError(error: AxiosError) {
+export function isNetworkOrIdempotentRequestError(error: AxiosError): boolean {
   return isNetworkError(error) || isIdempotentRequestError(error);
 }

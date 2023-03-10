@@ -12,7 +12,7 @@ specifiers:
   prettier: 2.8.4
   rxjs: ^7.8.0
   tsup: ^6.6.3
-  typescript: 5.0.0-beta
+  typescript: 5.0.1-rc
 
 dependencies:
   axios-auth-refresh: 3.3.6_axios@1.3.4
@@ -27,8 +27,8 @@ devDependencies:
   axios: 1.3.4
   husky: 8.0.3
   prettier: 2.8.4
-  tsup: 6.6.3_typescript@5.0.0-beta
-  typescript: 5.0.0-beta
+  tsup: 6.6.3_typescript@5.0.1-rc
+  typescript: 5.0.1-rc
 
 packages:
 
@@ -2419,7 +2419,7 @@ packages:
     resolution: {integrity: sha512-336iVw3rtn2BUK7ORdIAHTyxHGRIHVReokCR3XjbckJMK7ms8FysBfhLR8IXnAgy7T0PTPNBWKiH514FOW/WSg==}
     dev: false
 
-  /tsup/6.6.3_typescript@5.0.0-beta:
+  /tsup/6.6.3_typescript@5.0.1-rc:
     resolution: {integrity: sha512-OLx/jFllYlVeZQ7sCHBuRVEQBBa1tFbouoc/gbYakyipjVQdWy/iQOvmExUA/ewap9iQ7tbJf9pW0PgcEFfJcQ==}
     engines: {node: '>=14.18'}
     hasBin: true
@@ -2449,7 +2449,7 @@ packages:
       source-map: 0.8.0-beta.0
       sucrase: 3.29.0
       tree-kill: 1.2.2
-      typescript: 5.0.0-beta
+      typescript: 5.0.1-rc
     transitivePeerDependencies:
       - supports-color
       - ts-node
@@ -2492,8 +2492,8 @@ packages:
       is-typed-array: 1.1.10
     dev: true
 
-  /typescript/5.0.0-beta:
-    resolution: {integrity: sha512-+SSabbSXG5mtF+QGdV9uXXt9Saq1cSyI6hSG7znhaLoquleJpnmfkwSxFngK9c2fWWi1W/263TuzXQOsIcdjjA==}
+  /typescript/5.0.1-rc:
+    resolution: {integrity: sha512-zh75jY8gPo/y7fpmlTVN2bb2MigoLx4hGk+Cla9pY6lgSTvzJrmQQrRt5S80VTsEt6biWPZJgLK2nm6f0Ya+mA==}
     engines: {node: '>=4.2.0'}
     hasBin: true
     dev: true
