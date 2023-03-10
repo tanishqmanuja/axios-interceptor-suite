@@ -1,5 +1,11 @@
 # @tqman/axios-interceptor-suite
 
+## 0.3.2
+
+### Patch Changes
+
+- Another possible fix for update issues
+
 ## 0.3.1
 
 ### Patch Changes
