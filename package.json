@@ -4,8 +4,7 @@
   "description": "Useful axios interceptors",
   "type": "module",
   "files": [
-    "dist/*",
-    "src/*"
+    "dist/*"
   ],
   "exports": {
     ".": {

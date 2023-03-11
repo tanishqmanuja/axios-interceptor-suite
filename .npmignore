@@ -2,6 +2,7 @@
 .github
 .husky
 .vscode
+src
 pnpm-lock.yaml
 tsconfig.json
 tsup.config.ts
