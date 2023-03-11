@@ -4,7 +4,7 @@ import authRefreshInterceptor, {
   AxiosAuthRefreshRequestConfig as _AxiosAuthRefreshRequestConfig,
 } from "axios-auth-refresh";
 
-import { MaybePromise } from "~utils/lib/typescript/promise.js";
+import { MaybePromise } from "../utils/lib/typescript/promise.js";
 
 export type AxiosAuthRefreshRequestConfig = _AxiosAuthRefreshRequestConfig;
 

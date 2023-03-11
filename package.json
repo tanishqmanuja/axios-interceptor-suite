@@ -1,6 +1,6 @@
 {
   "name": "@tqman/axios-interceptor-suite",
-  "version": "0.3.3",
+  "version": "0.3.4",
   "description": "Useful axios interceptors",
   "type": "module",
   "files": [
@@ -9,17 +9,17 @@
   ],
   "exports": {
     ".": {
-      "types": "./src/index.ts",
+      "types": "./dist/types/index.d.ts",
       "import": "./dist/index.js",
       "require": "./dist/index.cjs"
     },
     "./interceptors": {
-      "types": "./src/interceptors/index.ts",
+      "types": "./dist/types/interceptors/index.d.ts",
       "import": "./dist/interceptors/index.js",
       "require": "./dist/interceptors/index.cjs"
     },
     "./vendor": {
-      "types": "./src/vendor.ts",
+      "types": "./dist/types/vendor.d.ts",
       "import": "./dist/vendor.js",
       "require": "./dist/vendor.cjs"
     }
@@ -30,10 +30,11 @@
   "scripts": {
     "prepare": "husky install",
     "build": "tsup",
+    "build:types": "tsc -p tsconfig.types.json",
     "format": "prettier --write **/*.ts",
     "format:check": "prettier --check **/*.ts ",
     "type:check": "tsc",
-    "release": "pnpm format:check && pnpm type:check && pnpm build && changeset publish"
+    "release": "pnpm format:check && pnpm type:check && pnpm build && pnpm build:types && changeset publish"
   },
   "keywords": [
     "axios",

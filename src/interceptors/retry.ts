@@ -1,7 +1,7 @@
 import { AxiosError, AxiosInstance, AxiosRequestConfig } from "axios";
 
 import { isNetworkOrIdempotentRequestError } from "../helpers/errors-predicates.js";
-import { MaybePromise } from "~utils/lib/typescript/promise.js";
+import { MaybePromise } from "../utils/lib/typescript/promise.js";
 
 const DEFAULT_RETRY_COUNT = 2;
 const DEFAULT_RETRY_DELAY_MS = 1000;

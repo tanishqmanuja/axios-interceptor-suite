@@ -1,5 +1,11 @@
 # @tqman/axios-interceptor-suite
 
+## 0.3.4
+
+### Patch Changes
+
+- Fix types
+
 ## 0.3.3
 
 ### Patch Changes
